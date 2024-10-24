@@ -5,12 +5,13 @@
 }
 
 body {
-    background: rgb(237, 228, 241);
+    background: rgb(246, 242, 248);
     background: linear-gradient(
         0deg,
-        rgba(237, 228, 241, 1) 0%,
-        rgba(209, 190, 218, 1) 41%,
-        rgba(200, 175, 212, 1) 88%
+        rgba(246, 242, 248, 1) 15%,
+        rgba(228, 215, 234, 1) 51%,
+        rgba(219, 202, 227, 1) 89%,
+        rgba(219, 202, 227, 1) 89%
     );
     font-family: "Arima", system-ui;
     font-weight: 600;
@@ -34,20 +35,31 @@ body {
 }
 
 .sub-container {
-    background-color: #a678ba;
+    background: rgb(231, 177, 177);
+    background: linear-gradient(
+        180deg,
+        rgba(231, 177, 177, 1) 26%,
+        rgba(221, 146, 146, 1) 69%,
+        rgba(216, 131, 131, 1) 100%
+    );
     margin: 0 auto;
     padding: 5px;
     width: 80%;
+    color: #6D2222;
     min-height: 80px;
+    max-width: 680px;
     align-content: center;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 
 .p-modal {
     min-width: 240px;
     height: 100%;
-    font-size: 18px;
+    font-size: 20px;
     text-align: start;
     padding: 10px;
+    font-weight: bold;
 }
 
 .btn-container {
@@ -59,4 +71,17 @@ body {
     width: 100%;
     min-height: 40px;
     cursor: pointer;
+    font-family: "Arima", system-ui;
+    font-weight: bolder;
+    background-color: #F5E0E0;
+    border: 2px solid #D27474;
+    border-radius: 15px;
+    transition: background-color 0.2s ease-in, border 0.2s ease-in;
+    font-size: 16px;
+    color: #6D2222;
+}
+
+.btn-action:hover{
+    background-color: #D27474;
+    border: 2px solid #A93737;
 }
