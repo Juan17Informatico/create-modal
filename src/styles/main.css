@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(237, 228, 241);
+    background: linear-gradient(
+        0deg,
+        rgba(237, 228, 241, 1) 0%,
+        rgba(209, 190, 218, 1) 41%,
+        rgba(200, 175, 212, 1) 88%
+    );
+    font-family: "Arima", system-ui;
+    font-weight: 600;
+}
+
+.home {
+    text-align: center;
+    align-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.display-inline-b {
+    display: inline-block;
+}
+
+.modal-btn-container {
+    min-height: 60px;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.sub-container {
+    background-color: #a678ba;
+    margin: 0 auto;
+    padding: 5px;
+    width: 80%;
+    min-height: 80px;
+    align-content: center;
+}
+
+.p-modal {
+    min-width: 240px;
+    height: 100%;
+    font-size: 18px;
+    text-align: start;
+    padding: 10px;
+}
+
+.btn-container {
+    width: 120px;
+    align-content: center;
+}
+
+.btn-action {
+    width: 100%;
+    min-height: 40px;
+    cursor: pointer;
+}
