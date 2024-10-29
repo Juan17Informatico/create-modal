@@ -8,13 +8,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     border-radius: 15px;
     border: 2px solid black;
-    height: 400px;
+    min-height: 400px;
     padding: 10px;
     width: 450px;
+    overflow: auto;
     z-index: 1;
+    animation: animarsuperior 0.5s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .modal-container > .modal-btn-container-close{
@@ -36,7 +39,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    min-height: 80%;
+    min-height: 100%;
     align-content: center;
     align-items: center;
 }
@@ -47,6 +50,10 @@
 
 .modal-contain > p{
     font-weight: 500;
+}
+
+.modal-contain > img {
+    width: 25%;
 }
 
 .modal-contain > button {
@@ -70,4 +77,55 @@
     height: 100%;
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.5); /* Capa negra semitransparente */
+}
+
+
+
+/* Animación */
+@keyframes animarsuperior {
+    from {
+        transform: translate(-50%, -300px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Animación de salida */
+@keyframes cerrarAnimacion {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -300px); /* Mueve el modal ligeramente hacia arriba */
+    }
+}
+
+/* Clase que activa la animación de cierre */
+.modal-closing {
+    animation: cerrarAnimacion 0.5s ease forwards;
+}
+
+
+/* * Modal Forms * */
+label{
+    display: block;
+    width: 100%;
+    text-align: start;
+}
+
+input {
+    border-radius: 10px;
+    border: 2px solid rgb(230, 213, 213);
+    color: rgb(37, 4, 4);
+    font-family: "Arima", system-ui;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
 }
