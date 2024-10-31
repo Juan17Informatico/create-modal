@@ -1,7 +1,7 @@
 
 /**
- * 
- * @param {HTML} param0 
+ * Funcion que crea de manera dinamica según las properties el contenido del modal
+ * @param {modalsProperties} modalsProperties 
  */
 export const ModalContent = ({ id, title, icon, text = "", form = undefined, closeBtn = undefined }, modalContent) => {
     
@@ -17,10 +17,11 @@ export const ModalContent = ({ id, title, icon, text = "", form = undefined, clo
     closeButtonHtml.setAttribute('id', id);
     
     modalContent.append(iconImg, titleH2, textP );
+    const btnEnviar = document.createElement('button');
 
+    const formElement = document.createElement('form');
     if(form){
         
-        const formElement = document.createElement('form');
         formElement.setAttribute('id', form.id); 
         
         form.preguntas.forEach((pregunta) => {
@@ -38,8 +39,7 @@ export const ModalContent = ({ id, title, icon, text = "", form = undefined, clo
             
         });
         
-        const btnEnviar = document.createElement('button');
-        btnEnviar.setAttribute('class', 'btn-modal')
+        btnEnviar.setAttribute('class', 'btn-modal');
         btnEnviar.type = form.typeSubmit;
         btnEnviar.innerText = 'Enviar'; 
 
@@ -51,7 +51,9 @@ export const ModalContent = ({ id, title, icon, text = "", form = undefined, clo
     modalContent.appendChild(closeButtonHtml);
 
     return [
-        closeButtonHtml
+        closeButtonHtml,
+        btnEnviar,
+        formElement
     ];
     
     

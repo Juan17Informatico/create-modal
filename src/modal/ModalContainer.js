@@ -1,5 +1,5 @@
 /**
- * Función que crea el contenedor del modal para crear uno nuevo
+ * Función que crea el contenedor del modal
  * @param {IdContainer} id
  */
 export const ModalContainer = (id) => {

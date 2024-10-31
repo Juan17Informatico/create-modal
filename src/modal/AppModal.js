@@ -47,7 +47,7 @@ const modalsProperties = {
                     id:   'age',
                 },
             ],
-            typeSubmit: 'button'
+            typeSubmit: 'submit'
         }
     },
     info: {
@@ -90,7 +90,7 @@ export const AppModal = (app) => {
     
     const [ closeButtonHtmlSuccess ] = ModalContent( modalsProperties.success, modalContent);
     const [ closeButtonHtmlError ] = ModalContent( modalsProperties.error, modalContentError);
-    const [ closeButtonHtmlForm ] = ModalContent( modalsProperties.quiz, modalContentForm );
+    const [ closeButtonHtmlForm, btnEnviarForm, formElement ] = ModalContent( modalsProperties.quiz, modalContentForm );
     const [ closeButtonHtmlInfo ] = ModalContent( modalsProperties.info, modalContentInfo );
 
     const openModal = ( elementHtmlContainer) => {
@@ -123,6 +123,17 @@ export const AppModal = (app) => {
     closeButtonHtmlError.addEventListener('click', () => closeModal(divModalContainerError))
     closeButtonHtmlForm.addEventListener('click', () => closeModal(divModalContainerForm))
     closeButtonHtmlInfo.addEventListener('click', () => closeModal(divModalContainerInfo))
+
+    // Listener Form
+    btnEnviarForm.addEventListener('click', ( event ) => {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const lastname = document.getElementById('lastname').value;
+        const age = document.getElementById('age').value;
+
+        alert(`Hola ${name} ${lastname}, \ntienes ${age}`);
+    })
 
     window.addEventListener('click', (event) => {
         if (event.target === overlay) {
