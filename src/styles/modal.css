@@ -56,7 +56,7 @@
     width: 25%;
 }
 
-.modal-contain > button {
+.modal-contain > button, .btn-modal {
     width: 80px;
     padding: 5px;
     height: 40px;

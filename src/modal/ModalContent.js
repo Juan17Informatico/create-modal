@@ -39,6 +39,7 @@ export const ModalContent = ({ id, title, icon, text = "", form = undefined, clo
         });
         
         const btnEnviar = document.createElement('button');
+        btnEnviar.setAttribute('class', 'btn-modal')
         btnEnviar.type = form.typeSubmit;
         btnEnviar.innerText = 'Enviar'; 
 
