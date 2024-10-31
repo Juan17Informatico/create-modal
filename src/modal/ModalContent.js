@@ -48,5 +48,10 @@ export const ModalContent = ({ id, title, icon, text = "", form = undefined, clo
         
     }
     modalContent.appendChild(closeButtonHtml);
+
+    return [
+        closeButtonHtml
+    ];
+    
     
 }

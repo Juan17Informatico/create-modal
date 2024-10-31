@@ -88,10 +88,10 @@ export const AppModal = (app) => {
     modalContainers.appendChild(divModalContainerForm);
     modalContainers.appendChild(divModalContainerInfo);
     
-    ModalContent( modalsProperties.success, modalContent);
-    ModalContent( modalsProperties.error, modalContentError);
-    ModalContent( modalsProperties.quiz, modalContentForm );
-    ModalContent( modalsProperties.info, modalContentInfo );
+    const [ closeButtonHtmlSuccess ] = ModalContent( modalsProperties.success, modalContent);
+    const [ closeButtonHtmlError ] = ModalContent( modalsProperties.error, modalContentError);
+    const [ closeButtonHtmlForm ] = ModalContent( modalsProperties.quiz, modalContentForm );
+    const [ closeButtonHtmlInfo ] = ModalContent( modalsProperties.info, modalContentInfo );
 
     const openModal = ( elementHtmlContainer) => {
         elementHtmlContainer.classList.remove('hidden');
@@ -118,6 +118,11 @@ export const AppModal = (app) => {
     closeBtnError.addEventListener('click', () => closeModal(divModalContainerError));
     closeBtnForm.addEventListener('click', () => closeModal(divModalContainerForm));
     closeBtnInfo.addEventListener('click', () => closeModal(divModalContainerInfo));
+
+    closeButtonHtmlSuccess.addEventListener('click', () => closeModal(divModalContainer))
+    closeButtonHtmlError.addEventListener('click', () => closeModal(divModalContainerError))
+    closeButtonHtmlForm.addEventListener('click', () => closeModal(divModalContainerForm))
+    closeButtonHtmlInfo.addEventListener('click', () => closeModal(divModalContainerInfo))
 
     window.addEventListener('click', (event) => {
         if (event.target === overlay) {
