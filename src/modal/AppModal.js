@@ -6,7 +6,7 @@ const modalsProperties = {
     success: {
         id: 'success',
         title: 'Guardado', 
-        icon: '/img/check.png', 
+        icon: '/create-modal/img/check.png', 
         text: 'Mensaje enviado con exito', 
         closeBtn: 'Cerrar',
         form: undefined
@@ -14,7 +14,7 @@ const modalsProperties = {
     error: {
         id: 'error',
         title: 'Error', 
-        icon: '/img/error.png', 
+        icon: '/create-modal/img/error.png', 
         text: 'Error al enviar solicitud', 
         closeBtn: 'Cerrar',
         form: undefined
@@ -22,7 +22,7 @@ const modalsProperties = {
     quiz: {
         id: 'quiz',
         title: 'Cuestionario', 
-        icon: '/img/question.png', 
+        icon: '/create-modal/img/question.png', 
         text: 'Responde lo siguiente:', 
         closeBtn: 'Cerrar',
         form: {
@@ -53,7 +53,7 @@ const modalsProperties = {
     info: {
         id: 'info',
         title: 'Información', 
-        icon: '/img/info.png', 
+        icon: '/create-modal/img/info.png', 
         text: 'Esto es un modal informativo', 
         closeBtn: 'Cerrar',
         form: undefined
